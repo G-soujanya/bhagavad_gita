@@ -7,10 +7,9 @@
 }
 
 #contianer {
-    width: 500px;
+    width: 700px;
     height: 300px;
-    margin-top: 10px;
-    margin-left: 400px;
+    margin-left: 350px;
     display: flex;
     background-color: white;
 }
@@ -32,12 +31,13 @@ h1 {
 button {
     margin: 15px;
     padding: 8px;
+    width:80px;
 }
 
 #t{
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 .glow {
@@ -60,15 +60,25 @@ button {
 }
 #d{
     margin: 0;
-    margin-left: 810px;
+    margin-left: 965px;
     border-bottom: 2px solid #fff;
+}
+#bt{
+    display: flex;
+    justify-content: space-between;
 }
     </style>
 </head>
 <body>
-   <center><h1 class="glow">Bhagavath Geetha</h1></center> 
+    <div id="bt">
+        <i class="fa-solid fa-play"></i>
+        <i class="fa-solid fa-play fa-rotate-180"></i>
+    </div>
+    <audio src="[iSongs.info] 01 - Bhagavth Geetha.mp3"></audio>
+    <audio src="[iSongs.info] 01 - Bhagavth Geetha.mp3"></audio>
+   <center><h1 class="glow" style="font-size:50px;">Bhagavath Geetha</h1></center> 
     <div id="contianer">
-        <div id="img"><img src ="gita-1.jpg" width="200px" height="200px" id="i"></div>
+        <div id="img"><img src ="gita-1.jpg" width="250px" height="200px" id="i"></div>
         <h3 id="q">There is nothing lost or wasted in this life.</h3>
     </div>
     <a id="d" class="glow">Download</a>
@@ -155,6 +165,41 @@ button {
         b=rc();
         q=rc();
         body.style.backgroundImage="linear-gradient("+getAngle()+"deg,"+r+","+g+","+b+","+q+")";
-    });</script>
+    });
+    let music = document.getElementsByTagName("i")[0];
+let audio = document.getElementsByTagName("audio")[0];
+music.addEventListener("click", () => {
+    if (music.classList.contains("fa-play")) {
+        audio1.pause();
+        music1.classList.remove("fa-pause");
+        music1.classList.add("fa-play");
+        audio.play();
+        music.classList.remove("fa-play");
+        music.classList.add("fa-pause");
+    }
+    else {
+        audio.pause();
+        music.classList.remove("fa-pause");
+        music.classList.add("fa-play");
+    }
+});
+let music1 = document.getElementsByTagName("i")[1];
+let audio1 = document.getElementsByTagName("audio")[1];
+music1.addEventListener("click", () => {
+    if (music1.classList.contains("fa-play")) {
+        audio.pause();
+        music.classList.remove("fa-pause");
+        music.classList.add("fa-play");
+        audio1.play();
+        music1.classList.remove("fa-play");
+        music1.classList.add("fa-pause");
+    }
+    else {
+        audio1.pause();
+        music1.classList.remove("fa-pause");
+        music1.classList.add("fa-play");
+    }
+});
+    </script>
 </body>
 </html>
