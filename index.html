@@ -6,7 +6,7 @@
     background-image: linear-gradient(red, yellow, blue);
 }
 
-#contianer {
+#c{
     width: 700px;
     height: 300px;
     margin-left: 350px;
@@ -67,39 +67,65 @@ button {
     display: flex;
     justify-content: space-between;
 }
-@media only screen and (max-width:600px){
-    #contianer{
-        display:flex;
-        flex-direction: column;
-        align-items:center;
-        width:300px;
-      margin-left:100px;
-    }
-  #q{
-    width:300px;
-   margin:0px;
-   padding-left:10px;
-   background-color: white;
+@media only screen and (max-width: 600px) {
+  #c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin-left: 100px;
   }
-  #img{
-    width:50vw;
-    margin-left:5px;
+
+  #q {
+    width: 300px;
+    margin: 0px;
+    padding-left: 10px;
+    background-color: white;
   }
-  #d{
-    margin-left:60vw;
+
+  #img {
+    width: 50vw;
+    margin-left: 5px;
+  }
+
+  #d {
+    margin-left: 60vw;
     margin-top: auto;
   }
-  button{
+
+  button {
     margin-top: 100px;
   }
-};
-@media only screen and (max-width:720px){
-  #container{
-    display:flex;
-        flex-direction: column;
-        align-items:center;
-        width:300px;
-      margin-left:100px;
+}
+
+@media only screen and (max-width: 900px) and (min-width:600px){
+  #c {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    margin: auto;
+    background-color: white;
+  }
+
+  #q {
+    width: 300px;
+    margin: 0px;
+    padding-left: 10px;
+    background-color: white;
+  }
+
+  #img {
+    width: 50vw;
+    margin-left: 5px;
+  }
+
+  #d {
+    margin-left: 80vw;
+    margin-top: auto;
+  }
+
+  button {
+    margin-top: 100px;
   }
 }
     </style>
@@ -113,7 +139,7 @@ button {
     <audio src="[iSongs.info] 01 - Bhagavth Geetha.mp3"></audio>
     <audio src="[iSongs.info] 01 - Bhagavth Geetha.mp3"></audio>
    <center><h1 class="glow" style="font-size:50px;">Bhagavath Geetha</h1></center> 
-    <div id="contianer">
+    <div id="c">
         <div id="img"><img src ="gita-1.jpg" width="250px" height="200px" id="i"></div>
         <h3 id="q">There is nothing lost or wasted in this life.</h3>
     </div>
